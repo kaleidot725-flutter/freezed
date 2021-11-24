@@ -8,9 +8,10 @@ environment:
 
 
 dependencies:
-  freezed_annotation: ^1.0.0
+  freezed_annotation: ^1.0.0 # これを追加する
+  json_serializable: ^6.0.1 # 必要であれば追加する
 
 dev_dependencies:
   lints: ^1.0.0
-  build_runner: ^2.1.5
-  freezed: ^1.0.0
+  build_runner: ^2.1.5 # これを追加する
+  freezed: ^1.0.0 # これを追加する

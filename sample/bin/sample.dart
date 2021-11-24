@@ -1,11 +1,33 @@
+import 'model/animal.dart';
 import 'model/company.dart';
 import 'model/founder.dart';
 import 'model/human.dart';
 import 'model/person.dart';
 
 void main(List<String> arguments) {
+  _defaultTest();
   _freezedTest();
   _noFreezedTest();
+}
+
+void _defaultTest() {
+  var yagi = Animal(name: "Yagi", age: 0);
+  print("■ PROPERTY AND TOSTRING");
+  print("name ${yagi.name}");
+  print("age  ${yagi.age}");
+  print("toString $yagi");
+
+  var ushi = Animal(name: "Ushi", age: 0);
+  var clone = yagi.copyWith();
+  print("■ COMPARE");
+  print("== ${yagi == ushi}");
+  print("== ${yagi == clone}");
+
+  var renameYagi = yagi.copyWith(name: "ああああ");
+  var oldYagi = yagi.copyWith(age: 100);
+  print("■ COPY WITH");
+  print("toString $renameYagi");
+  print("toString $oldYagi");
 }
 
 void _freezedTest() {
